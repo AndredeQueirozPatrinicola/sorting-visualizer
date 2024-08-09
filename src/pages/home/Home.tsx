@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BarContainer } from "../../components/BarContainer/BarContainer";
 import { Button } from "../../components/Button/Button";
 import { SelectAlgo } from "../../components/SelectAlgo/SelectAlgo";
@@ -14,7 +14,7 @@ export function Home() {
     const sort = () => {
         setIsSorting(true);
     };
-    const changeAlgo = (e) => {
+    const changeAlgo = (e: React.ChangeEvent<HTMLSelectElement>) => {
       setSelectedAlgo(e.target.value)
     }
     useSort(selectedAlgo, numbers, setNumbers, isSorting, setIsSorting, 1, timeout)

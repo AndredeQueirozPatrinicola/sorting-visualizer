@@ -1,6 +1,6 @@
-import { SortButtonContract } from "../../types/ButtonContract"
+import { SortButtonContractEvent } from "../../types/ButtonContract"
 
-export function SelectAlgo({ callback }: SortButtonContract){
+export function SelectAlgo({ callback }: SortButtonContractEvent){
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         e.preventDefault()
         callback(e)
